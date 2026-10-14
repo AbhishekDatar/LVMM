@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About LVMM — Las Vegas Marathi Mandal</title>
+  <meta name="description" content="Las Vegas Marathi Mandal is a nonprofit cultural organization preserving and promoting the rich cultural heritage of Maharashtra, India, and fostering ties among people of Marathi origin in Las Vegas.">
+  <meta name="theme-color" content="#7a1f2b">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .about-photo { position: relative; }
+    .about-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 200px 200px var(--radius-lg) var(--radius-lg); border: 6px solid #fff; box-shadow: var(--shadow-lg); }
+    .about-photo .quote-chip {
+      position: absolute; right: -18px; bottom: 28px; max-width: 240px; background: #fff; border-radius: var(--radius);
+      padding: 14px 18px; box-shadow: var(--shadow-lg); font-family: var(--font-marathi); color: var(--maroon-800); font-size: 1.1rem; line-height: 1.4;
+    }
+    .about-photo .quote-chip small { display: block; font-family: var(--font-body); font-size: .78rem; color: var(--text-muted); margin-top: 4px; }
+    @media (max-width: 960px) { .about-photo .quote-chip { right: 10px; } }
+    .pill svg { width: 14px; height: 14px; }
+    .values-split { grid-template-columns: .85fr 1.3fr; }
+    @media (max-width: 960px) { .values-split { grid-template-columns: 1fr; } }
+    .mission-card { border-left: 4px solid var(--saffron-500); }
+    .value { display: flex; gap: 16px; align-items: flex-start; }
+    .value .icon-badge { flex: none; margin: 0; width: 48px; height: 48px; border-radius: 14px; }
+    .value .icon-badge svg { width: 24px; height: 24px; }
+    .value h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .value p { margin: 0; font-size: .96rem; }
+    .section-dark .value .icon-badge { background: rgba(248,212,138,.14); color: var(--marigold-300); }
+  </style>
+</head>
+<body data-page="about">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>About</span></nav>
+        <span class="eyebrow">About LVMM</span>
+        <h1>Our roots, our people, our desert home.</h1>
+        <p class="lead">Las Vegas Marathi Mandal is a nonprofit cultural organization, desirous of preserving and promoting the rich cultural heritage of Maharashtra, India, and fostering cultural ties among the people of Marathi origin and culture.</p>
+      </div>
+    </section>
+
+    <!-- Story / mission -->
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Who we are</span>
+          <h2>A little piece of Maharashtra in Las Vegas</h2>
+          <p class="lead">Far from home, a shared language, a familiar festival or a favourite song can make a city feel like family. That is what LVMM is for.</p>
+          <p>We are a volunteer-run community of Marathi families, students and friends across Las Vegas and Henderson. Together we celebrate the festivals we grew up with, pass our language on to our children, and make space for music, dance, theatre and food from back home.</p>
+          <div class="card mission-card" style="margin-top:28px">
+            <span class="pill maroon" style="margin-bottom:12px"><i data-icon="flag"></i> Our mission</span>
+            <p style="margin:0">Las Vegas Marathi Mandal is a not-for-profit organization and is founded with the goal of bringing together the Marathi community in Las Vegas, Nevada by celebrating Marathi festivals, cultural events such as music, dance and theatre, related to the culture, traditions and the language of the state of Maharashtra, India.</p>
+          </div>
+        </div>
+        <div class="about-photo reveal reveal-delay-2">
+          <img src="assets/img/gallery/g12.jpg" alt="LVMM members gathered for a group photo in traditional Marathi attire" width="1400" height="933" loading="lazy">
+          <div class="quote-chip">आपली संस्कृती, आपली माणसं.<small>Our culture, our people.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What we do -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="divider-motif"><i data-icon="lotus"></i></div>
+          <span class="eyebrow">What we do</span>
+          <h2>Many hands, one Mandal</h2>
+          <p class="lead">Our work is carried by dedicated committees of volunteers — each looking after a part of community life.</p>
+        </div>
+        <div class="grid grid-3">
+          <a class="card card-hover card-link reveal" href="events.html">
+            <div class="icon-badge"><i data-icon="sparkles"></i></div>
+            <h3>Festivals &amp; culture</h3>
+            <p class="muted">Ganeshotsav, Diwali and more, with cultural programs that put our community's talent on stage.</p>
+            <span class="more">See events <i data-icon="arrowRight"></i></span>
+          </a>
+          <a class="card card-hover card-link reveal reveal-delay-1" href="marathi-shala.html">
+            <div class="icon-badge"><i data-icon="book"></i></div>
+            <h3>Marathi Shala</h3>
+            <p class="muted">Classes that help children read, write and speak Marathi — free for member families.</p>
+            <span class="more">Learn about Shala <i data-icon="arrowRight"></i></span>
+          </a>
+          <a class="card card-hover card-link reveal reveal-delay-2" href="youth.html">
+            <div class="icon-badge"><i data-icon="users"></i></div>
+            <h3>Vegas Yuva</h3>
+            <p class="muted">Our youth group for ages 15–35, carrying Marathi culture forward in the voices of the next generation.</p>
+            <span class="more">Meet the youth <i data-icon="arrowRight"></i></span>
+          </a>
+          <div class="card reveal">
+            <div class="icon-badge maroon"><i data-icon="theater"></i></div>
+            <h3>Drama club &amp; technical</h3>
+            <p class="muted">Rehearsals, stagecraft, sound and lights — the team that makes every show come alive.</p>
+          </div>
+          <div class="card reveal reveal-delay-1">
+            <div class="icon-badge maroon"><i data-icon="utensils"></i></div>
+            <h3>Sports &amp; food</h3>
+            <p class="muted">Sports events and the food committee that brings the flavours of Maharashtra to every gathering.</p>
+          </div>
+          <div class="card reveal reveal-delay-2">
+            <div class="icon-badge maroon"><i data-icon="globe"></i></div>
+            <h3>BMM representation</h3>
+            <p class="muted">We represent Las Vegas within Bruhan Maharashtra Mandal, connecting us to Marathi communities across North America.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="split values-split" style="align-items:start">
+          <div class="reveal">
+            <span class="eyebrow" style="color:var(--marigold-300)">What guides us</span>
+            <h2>Our values</h2>
+            <p>LVMM is run entirely by volunteers who give their evenings and weekends so that our traditions have a home here. These are the ideas we keep coming back to.</p>
+            <div class="btn-row" style="margin-top:26px">
+              <a class="btn btn-light" href="committee.html">Meet the committee</a>
+              <a class="btn btn-ghost-light" href="bylaws.html"><i data-icon="file"></i> Read our bylaws</a>
+            </div>
+          </div>
+          <div class="grid grid-2 reveal reveal-delay-1" style="gap:28px">
+            <div class="value">
+              <div class="icon-badge"><i data-icon="heart"></i></div>
+              <div><h3>Community first</h3><p>Every family, student and elder is welcome — no one should celebrate alone.</p></div>
+            </div>
+            <div class="value">
+              <div class="icon-badge"><i data-icon="lotus"></i></div>
+              <div><h3>Heritage</h3><p>Preserving the language, arts and traditions of Maharashtra for generations to come.</p></div>
+            </div>
+            <div class="value">
+              <div class="icon-badge"><i data-icon="graduation"></i></div>
+              <div><h3>Learning</h3><p>Helping children and young adults connect with Marathi through Shala and Yuva.</p></div>
+            </div>
+            <div class="value">
+              <div class="icon-badge"><i data-icon="shield"></i></div>
+              <div><h3>Transparency</h3><p>A not-for-profit governed by its bylaws and an elected executive committee.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo strip -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="mosaic reveal" style="grid-auto-rows:200px">
+          <a class="wide" href="assets/img/gallery/g15.jpg" data-lightbox><img src="assets/img/gallery/thumbs/g15.jpg" alt="Members in colourful traditional sarees" loading="lazy"></a>
+          <a href="assets/img/gallery/g11.jpg" data-lightbox><img src="assets/img/gallery/thumbs/g11.jpg" alt="Dindi procession with a saffron flag" loading="lazy"></a>
+          <a href="assets/img/gallery/g16.jpg" data-lightbox><img src="assets/img/gallery/thumbs/g16.jpg" alt="Folk dance performance on stage" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="padding-top:clamp(24px,4vw,48px)">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Join the Mandal family</h2>
+            <p>Your annual membership keeps our festivals, Marathi Shala and youth programs going — and connects you with Marathi friends across the valley.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-light" href="membership.html">Become a member</a>
+            <a class="btn btn-ghost-light" href="committee.html">Volunteer with us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

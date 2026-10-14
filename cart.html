@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Cart — Las Vegas Marathi Mandal</title>
+  <meta name="description" content="Review your Las Vegas Marathi Mandal membership cart.">
+  <meta name="theme-color" content="#7a1f2b">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    [hidden] { display: none !important; }
+    .cart-items-card { padding-top: 10px; padding-bottom: 10px; }
+    .cart-items-card .cart-item:last-child { border-bottom: 0; }
+    .summary-card { position: sticky; top: calc(var(--header-h) + 20px); }
+    .summary-card h2 { font-size: 1.5rem; }
+    .summary-card .btn.is-disabled { opacity: .6; }
+    .pay-stack { display: grid; gap: 12px; margin-top: 16px; }
+    .summary-card .pay-method { position: relative; display: block; padding: 14px 16px; font-size: .9rem; }
+    .summary-card .pay-method .icon-badge { display: none; }
+    .summary-card .pay-method strong { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .summary-card .pay-method strong svg { width: 16px; height: 16px; color: var(--saffron-600); }
+    .summary-card .pay-method code { display: block; width: fit-content; max-width: 100%; font-size: .8rem; word-break: normal; overflow-wrap: anywhere; margin-top: 4px; }
+    .summary-card .copy-btn { position: absolute; top: 10px; right: 10px; margin: 0; padding: 5px 10px; }
+    .mini-product { display: flex; gap: 16px; align-items: center; }
+    .mini-product .thumb { width: 60px; height: 60px; border-radius: 16px; background: var(--cream-200); display: grid; place-items: center; flex: none; }
+    .mini-product .thumb img { width: 70%; }
+    .mini-product h3 { font-size: 1.05rem; margin: 0 0 2px; }
+    .mini-product .btn { margin-left: auto; }
+    .mini-card { display: flex; flex-direction: column; gap: 16px; }
+    .mini-card .btn { align-self: flex-start; }
+    @media (max-width: 900px) { .summary-card { position: static; } }
+    @media (max-width: 520px) { .cart-item { grid-template-columns: 52px 1fr; } .cart-item > strong { grid-column: 2; } .cart-item .thumb { width: 52px; height: 52px; } }
+  </style>
+</head>
+<body data-page="">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero" style="padding-bottom:clamp(48px,6vw,80px)">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="membership.html">Membership</a><span>/</span><span>Cart</span></nav>
+        <span class="eyebrow">Your order</span>
+        <h1>Your cart</h1>
+        <p class="lead">Review your memberships, then let us know the names of everyone included.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:clamp(40px,6vw,72px)">
+      <div class="container" data-cart>
+        <!-- Empty -->
+        <div class="card empty-state" data-cart-empty>
+          <div class="icon-badge"><i data-icon="cart"></i></div>
+          <h2 style="font-size:1.8rem">Your cart is empty</h2>
+          <p class="muted" style="max-width:440px;margin:0 auto 24px">Add a 2026 annual membership to support the Mandal and get free Marathi Shala for your children.</p>
+          <a class="btn btn-primary" href="membership.html">Browse memberships <i data-icon="arrowRight"></i></a>
+        </div>
+
+        <!-- Full -->
+        <div class="cart-layout" data-cart-full hidden>
+          <div>
+            <div class="card cart-items-card">
+              <h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Cart items</h2>
+              <div data-cart-items></div>
+            </div>
+            <a href="membership.html" class="btn btn-outline btn-sm" style="margin-top:20px"><i data-icon="chevronLeft"></i> Continue shopping</a>
+          </div>
+
+          <aside class="card summary-card" aria-labelledby="summary-h">
+            <h2 id="summary-h">Order summary</h2>
+            <div class="summary-row"><span class="muted">Subtotal</span><span data-cart-total>$0.00</span></div>
+            <div class="summary-row total"><span>Total</span><span data-cart-total>$0.00</span></div>
+
+            <div class="field" style="margin-top:20px">
+              <label for="member-names">Member names</label>
+              <textarea id="member-names" class="textarea" style="min-height:96px" placeholder="List the names of all members covered by this order"></textarea>
+              <p class="hint">A note for your order — or email the names to <a href="mailto:lasvegasmarathimandal@gmail.com">lasvegasmarathimandal@gmail.com</a>.</p>
+            </div>
+
+            <button class="btn btn-primary btn-block is-disabled" type="button" aria-disabled="true" style="margin-top:18px">Checkout — coming soon</button>
+
+            <div class="callout" style="margin-top:20px;padding:16px 18px">
+              <i data-icon="info"></i>
+              <p style="font-size:.92rem">Online checkout is being upgraded. In the meantime, you can pay your membership by Zelle or check — and include the member names with your payment.</p>
+            </div>
+
+            <div class="pay-stack">
+              <div class="pay-method">
+                <div class="icon-badge"><i data-icon="send"></i></div>
+                <div><strong><i data-icon="send"></i> Zelle</strong><code>lasvegasmarathimandal@gmail.com</code></div>
+                <button class="copy-btn" type="button" data-copy="lasvegasmarathimandal@gmail.com">Copy</button>
+              </div>
+              <div class="pay-method">
+                <div class="icon-badge maroon"><i data-icon="bank"></i></div>
+                <div><strong><i data-icon="bank"></i> Check</strong><span class="muted" style="font-size:.85rem">Payable to</span> <code>Las Vegas Marathi Mandal</code></div>
+                <button class="copy-btn" type="button" data-copy="Las Vegas Marathi Mandal">Copy</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">You may be interested in</span>
+          <h2 style="margin:0">2026 memberships</h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="card mini-card">
+            <div class="mini-product">
+              <div class="thumb"><img src="assets/img/logo.png" alt=""></div>
+              <div><h3>Adult membership</h3><span class="muted" style="font-size:.9rem">Over 18 · <strong style="color:var(--maroon-800)">$40.00</strong></span></div>
+            </div>
+            <button class="btn btn-primary btn-sm" type="button" data-add-to-cart="adult-2026"><i data-icon="cart"></i> Add to cart</button>
+          </div>
+          <div class="card mini-card">
+            <div class="mini-product">
+              <div class="thumb"><img src="assets/img/kids.png" alt=""></div>
+              <div><h3>Child membership</h3><span class="muted" style="font-size:.9rem">Ages 12–18 · <strong style="color:var(--maroon-800)">$20.00</strong></span></div>
+            </div>
+            <button class="btn btn-maroon btn-sm" type="button" data-add-to-cart="child-2026"><i data-icon="cart"></i> Add to cart</button>
+          </div>
+          <div class="card mini-card">
+            <div class="mini-product">
+              <div class="thumb"><img src="assets/img/student.png" alt=""></div>
+              <div><h3>NSHE Student</h3><span class="muted" style="font-size:.9rem">Email your NSHE ID · <strong style="color:var(--leaf)">FREE</strong></span></div>
+            </div>
+            <a class="btn btn-outline btn-sm" href="membership.html">How to join <i data-icon="arrowRight"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membership &amp; Tickets — Las Vegas Marathi Mandal</title>
+  <meta name="description" content="Join Las Vegas Marathi Mandal for 2026. Annual adult membership $40, child $20, free for NSHE students. Members' children attend Marathi Shala free.">
+  <meta name="theme-color" content="#7a1f2b">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .price-card .tagline { font-weight: 700; color: var(--saffron-600); font-size: .9rem; margin: 0; }
+    .price-card .btn { margin-top: auto; }
+    .price.free { color: var(--leaf); }
+    .steps { counter-reset: step; }
+    .step { position: relative; padding-top: 30px; }
+    .step::before {
+      counter-increment: step; content: counter(step);
+      display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
+      background: var(--maroon-700); color: #fff; font-family: var(--font-display); font-size: 1.35rem; font-weight: 600;
+      margin-bottom: 18px; box-shadow: 0 0 0 6px rgba(122,31,43,.1);
+    }
+    .faq { display: grid; gap: 12px; }
+    .faq details { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0 22px; transition: box-shadow .25s, border-color .25s; }
+    .faq details[open] { box-shadow: var(--shadow-sm); border-color: rgba(232,119,46,.35); }
+    .faq summary {
+      list-style: none; cursor: pointer; padding: 18px 32px 18px 0; position: relative;
+      font-weight: 700; color: var(--maroon-800); font-size: 1.02rem;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+      width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
+      background: rgba(232,119,46,.12); color: var(--saffron-600); font-size: 1.1rem; line-height: 1; transition: transform .25s;
+    }
+    .faq details[open] summary::after { content: "−"; }
+    .faq details p { margin: 0 0 18px; color: var(--ink-700); }
+    .ticket-card { display: grid; grid-template-columns: 200px 1fr; gap: clamp(22px, 4vw, 40px); align-items: center; }
+    .ticket-card .poster { border-width: 4px; }
+    @media (max-width: 620px) { .ticket-card { grid-template-columns: 1fr; } .ticket-card .poster { max-width: 220px; } }
+    .ticket-table { width: 100%; max-width: 440px; border-collapse: collapse; font-size: .95rem; }
+    .ticket-table th, .ticket-table td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+    .ticket-table thead th { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
+    .ticket-table tbody th { font-weight: 600; color: var(--ink-700); }
+    .ticket-table td:nth-child(2) { font-weight: 800; color: var(--saffron-600); }
+    .note-strip { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; margin-top: 26px; color: rgba(251,245,236,.86); font-size: .95rem; }
+    .note-strip a { color: var(--marigold-300); font-weight: 700; }
+    .note-strip svg { width: 18px; height: 18px; color: var(--marigold-300); }
+    .note-strip > span { display: inline-flex; gap: 8px; align-items: flex-start; }
+    .note-strip svg { flex: none; margin-top: 4px; }
+    .note-strip a { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body data-page="membership">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Membership &amp; Tickets</span></nav>
+        <span class="eyebrow">Join for 2026</span>
+        <h1>Membership &amp; Tickets</h1>
+        <p class="lead">Add a membership to your cart, open the cart at the top-right corner and check out. Thank you for being part of the Mandal!</p>
+        <div class="note-strip">
+          <span><i data-icon="users"></i><span>Please send us the names of all members</span></span>
+          <span><i data-icon="mail"></i><span>Add a note at checkout or email <a href="mailto:lasvegasmarathimandal@gmail.com">lasvegasmarathimandal@gmail.com</a></span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">2026 annual membership</span>
+          <h2>Choose your membership</h2>
+          <p class="lead">One membership per person. Children under 11 are free, and NSHE students join at no cost.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card price-card featured reveal">
+            <span class="pill ribbon">Early bird</span>
+            <div class="product-img"><img src="assets/img/logo.png" alt="" width="60" height="60"></div>
+            <h3>2026 Annual Membership – Adult</h3>
+            <p class="tagline">Early bird discount up to 31st January, 2026</p>
+            <div class="price">$40<small>.00 / year</small></div>
+            <ul class="check-list">
+              <li>Over 18 years of age</li>
+              <li>Free Marathi Shala for member children</li>
+              <li>Supports Mandal festivals &amp; programs</li>
+            </ul>
+            <button class="btn btn-primary btn-block" type="button" data-add-to-cart="adult-2026"><i data-icon="cart"></i> Add to cart</button>
+          </article>
+
+          <article class="card price-card reveal reveal-delay-1">
+            <div class="product-img"><img src="assets/img/kids.png" alt="" width="60" height="60"></div>
+            <h3>2026 Annual Membership – Child</h3>
+            <p class="tagline">Ages 12 to 18</p>
+            <div class="price">$20<small>.00 / year</small></div>
+            <ul class="check-list">
+              <li>Between 12 and 18 years of age</li>
+              <li>Under 11 years is free</li>
+              <li>Be part of kids' programs &amp; events</li>
+            </ul>
+            <button class="btn btn-maroon btn-block" type="button" data-add-to-cart="child-2026"><i data-icon="cart"></i> Add to cart</button>
+          </article>
+
+          <article class="card price-card reveal reveal-delay-2">
+            <span class="pill green ribbon">Free</span>
+            <div class="product-img"><img src="assets/img/student.png" alt="" width="60" height="60"></div>
+            <h3>2026 Annual Membership – NSHE Student</h3>
+            <p class="tagline">For Nevada System of Higher Education students</p>
+            <div class="price free">FREE!</div>
+            <ul class="check-list">
+              <li>Just email us a photo of your NSHE ID</li>
+              <li>Include your phone number</li>
+              <li>No payment needed</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="mailto:lasvegasmarathimandal@gmail.com?subject=NSHE%20Student%20Membership%202026"><i data-icon="mail"></i> Email us</a>
+          </article>
+        </div>
+        <p class="center muted" style="margin-top:28px;font-size:.92rem">Secure online checkout is being upgraded — your cart is saved on this device in the meantime.</p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2>Three simple steps</h2>
+        </div>
+        <div class="grid grid-3 steps">
+          <div class="step reveal">
+            <h3>Add to cart</h3>
+            <p class="muted">Pick an Adult or Child membership above and add one for each family member.</p>
+          </div>
+          <div class="step reveal reveal-delay-1">
+            <h3>Check out</h3>
+            <p class="muted">Open the cart from the icon at the top-right corner, review your order and check out.</p>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <h3>Send member names</h3>
+            <p class="muted">Tell us the names of all members — add a note at checkout or email <a href="mailto:lasvegasmarathimandal@gmail.com">lasvegasmarathimandal@gmail.com</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Why join</span>
+          <h2>More than a membership</h2>
+          <p class="lead">Your membership keeps Marathi culture thriving in Las Vegas — and keeps our celebrations open to every family.</p>
+        </div>
+        <div class="grid" style="gap:18px">
+          <div class="card reveal" style="display:flex;gap:18px;align-items:flex-start">
+            <div class="icon-badge" style="margin:0;flex:none"><i data-icon="book"></i></div>
+            <div><h3 style="font-size:1.2rem">Free Marathi Shala</h3><p class="muted">Children of LVMM members attend Marathi Shala free of charge. <a href="marathi-shala.html">Learn about the Shala</a>.</p></div>
+          </div>
+          <div class="card reveal reveal-delay-1" style="display:flex;gap:18px;align-items:flex-start">
+            <div class="icon-badge" style="margin:0;flex:none"><i data-icon="sparkles"></i></div>
+            <div><h3 style="font-size:1.2rem">Community events</h3><p class="muted">Be part of our festivals and cultural programs — and pay member prices for event tickets (e.g. $25 vs $35 for Diwali 2026).</p></div>
+          </div>
+          <div class="card reveal reveal-delay-2" style="display:flex;gap:18px;align-items:flex-start">
+            <div class="icon-badge maroon" style="margin:0;flex:none"><i data-icon="heart"></i></div>
+            <div><h3 style="font-size:1.2rem">Support the Mandal</h3><p class="muted">LVMM is a not-for-profit run by volunteers. Membership helps fund our programs year-round.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tickets -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="card ticket-card reveal">
+          <a href="https://www.zeffy.com/en-US/ticketing/lvmm-deepostav--2026" target="_blank" rel="noopener" class="poster"><img src="assets/img/diwali-2026.jpg" alt="Diwali Cultural Program 2026 poster" width="768" height="1152" loading="lazy"></a>
+          <div>
+            <span class="eyebrow">Event tickets</span>
+            <h2>Diwali Cultural Program 2026</h2>
+            <div class="meta-row">
+              <span><i data-icon="calendar"></i> Saturday, Nov 7, 2026</span>
+              <span><i data-icon="clock"></i> 5 PM</span>
+              <span><i data-icon="pin"></i> Mario C &amp; Joanne Monaco Middle School, Las Vegas</span>
+            </div>
+            <p style="margin-bottom:16px">Tickets for our <span class="mr">दीपोत्सव</span> celebration are sold separately through Zeffy — and members pay less.</p>
+            <div class="table-wrap" style="margin-bottom:24px">
+              <table class="ticket-table">
+                <thead><tr><th scope="col">Ticket</th><th scope="col">Member</th><th scope="col">Non-member</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Adult</th><td>$25</td><td>$35</td></tr>
+                  <tr><th scope="row">Kids 5–10</th><td>$10</td><td>$20</td></tr>
+                  <tr><th scope="row">Under 5</th><td>Free</td><td>Free</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="https://www.zeffy.com/en-US/ticketing/lvmm-deepostav--2026" target="_blank" rel="noopener">Buy Diwali tickets <i data-icon="external"></i></a>
+              <a class="btn btn-outline" href="events.html">All events</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Questions</span>
+          <h2>Membership FAQ</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Who counts as a child member?</summary>
+            <p>The Child membership ($20) is for children between 12 and 18 years of age. Anyone over 18 needs an Adult membership ($40).</p>
+          </details>
+          <details>
+            <summary>Do children under 11 need a membership?</summary>
+            <p>No — children under 11 years of age are free. Just include their names when you send us your member list.</p>
+          </details>
+          <details>
+            <summary>I'm a college student. How do I join?</summary>
+            <p>NSHE students join free! Email a photo of your NSHE ID and your phone number to <a href="mailto:lasvegasmarathimandal@gmail.com?subject=NSHE%20Student%20Membership%202026">lasvegasmarathimandal@gmail.com</a>.</p>
+          </details>
+          <details>
+            <summary>How do I send the names of all members?</summary>
+            <p>Add a note at checkout listing everyone covered by your order, or email the names to <a href="mailto:lasvegasmarathimandal@gmail.com">lasvegasmarathimandal@gmail.com</a>.</p>
+          </details>
+          <details>
+            <summary>When does the early bird discount end?</summary>
+            <p>The early bird discount on the Adult membership is available up to 31st January, 2026.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Ready to join for 2026?</h2>
+            <p>Questions about membership? We're happy to help — write to us anytime.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-light" href="cart.html"><i data-icon="cart"></i> View cart</a>
+            <a class="btn btn-ghost-light" href="mailto:lasvegasmarathimandal@gmail.com">Email us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

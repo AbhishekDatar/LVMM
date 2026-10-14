@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marathi Shala — Las Vegas Marathi Mandal</title>
+  <meta name="description" content="Las Vegas Marathi Shala teaches Marathi language and culture to the next generation. Weekly online classes, CCSD Seal of Biliteracy, free for LVMM member children.">
+  <meta name="theme-color" content="#7a1f2b">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    [hidden] { display: none !important; }
+    .page-hero h1 .mr { display: block; font-size: .55em; color: var(--marigold-300); font-weight: 400; margin-bottom: .3em; letter-spacing: 0; }
+    .hero-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    .hero-chips .pill { font-size: .82rem; padding: 7px 14px; }
+    .pill svg { width: 15px; height: 15px; }
+    .highlight h3 { font-size: 1.15rem; }
+    .highlight p { font-size: .95rem; }
+    .photo-frame { position: relative; }
+    .photo-frame img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 6px solid #fff; aspect-ratio: 3/2; object-fit: cover; }
+    .photo-frame .badge-card {
+      position: absolute; right: -14px; bottom: -22px; background: #fff; border-radius: var(--radius); padding: 14px 18px;
+      box-shadow: var(--shadow-lg); display: flex; gap: 12px; align-items: center; max-width: 250px;
+    }
+    .photo-frame .badge-card .icon-badge { margin: 0; width: 44px; height: 44px; border-radius: 12px; flex: none; }
+    .photo-frame .badge-card .icon-badge svg { width: 22px; height: 22px; }
+    .photo-frame .badge-card strong { display: block; color: var(--maroon-800); line-height: 1.2; font-size: .95rem; }
+    .photo-frame .badge-card span { font-size: .8rem; color: var(--text-muted); }
+    @media (max-width: 620px) { .photo-frame .badge-card { position: relative; right: auto; bottom: auto; margin: -34px 12px 0 auto; width: fit-content; } }
+    .timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+    .timeline li { display: grid; grid-template-columns: 48px 1fr; gap: 18px; position: relative; padding-bottom: 26px; }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::after { content: ""; position: absolute; left: 23px; top: 50px; bottom: 4px; width: 2px; background: rgba(232,119,46,.25); }
+    .timeline li:last-child::after { display: none; }
+    .timeline .dot { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: #fff; border: 2px solid var(--saffron-500); color: var(--saffron-600); }
+    .timeline .dot svg { width: 22px; height: 22px; }
+    .timeline h3 { font-size: 1.1rem; margin: 10px 0 4px; }
+    .timeline p { margin: 0; color: var(--ink-700); font-size: .97rem; }
+    .principal { display: flex; gap: 16px; align-items: center; margin-top: 28px; }
+    .principal .avatar { width: 64px; height: 64px; font-size: 1.4rem; margin: 0; flex: none; }
+    .form-section-title { font-family: var(--font-display); color: var(--maroon-800); font-size: 1.3rem; margin: 0 0 4px; }
+    .form-block + .form-block { margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--border); }
+    .child-set .form-grid { grid-template-columns: 1.4fr .6fr; }
+    .child-set .level-field { grid-column: 1 / -1; }
+    .child-set + .child-set { margin-top: 16px; }
+    .child-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .add-child { margin-top: 16px; border-style: dashed; }
+    .choice.level span { align-items: flex-start; flex-direction: column; gap: 2px; text-align: left; white-space: normal; }
+    .choice.level small { font-weight: 500; color: var(--text-muted); font-size: .82rem; line-height: 1.45; }
+    .choice-group.levels { display: grid; grid-template-columns: 1fr 1.6fr; }
+    .choice-group.levels .choice span { height: 100%; width: 100%; }
+    .agree { display: flex; gap: 12px; align-items: flex-start; font-weight: 600; color: var(--ink-700); cursor: pointer; }
+    .agree input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--saffron-600); flex: none; }
+    .fees-box { background: var(--cream-100); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+    .fees-box .pay-method { margin-top: 12px; font-size: .93rem; }
+    .fees-box .pay-method > div { min-width: 0; }
+    @media (max-width: 620px) {
+      .child-set .form-grid, .choice-group.levels { grid-template-columns: 1fr; }
+      .fees-box { padding: 16px; }
+      .fees-box .pay-method { position: relative; display: block; padding: 14px 16px; }
+      .fees-box .pay-method .icon-badge { display: none; }
+      .fees-box .pay-method code { display: block; width: fit-content; max-width: 100%; font-size: .8rem; word-break: normal; overflow-wrap: anywhere; margin-top: 4px; }
+      .fees-box .copy-btn { position: absolute; top: 10px; right: 10px; margin: 0; padding: 5px 10px; }
+      .fees-box > p { margin-left: 0 !important; }
+    }
+  </style>
+</head>
+<body data-page="shala">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Marathi Shala</span></nav>
+        <span class="eyebrow">Las Vegas Marathi Shala</span>
+        <h1><span class="mr" lang="mr">मराठी शाळा</span>Marathi for the next generation</h1>
+        <p class="lead">A non-profit school affiliated with Las Vegas Marathi Mandal, teaching Marathi culture and language to children in the Las Vegas area.</p>
+        <div class="hero-chips">
+          <span class="pill light"><i data-icon="graduation"></i> CCSD Seal of Biliteracy</span>
+          <span class="pill light"><i data-icon="video"></i> Weekly on Google Meet</span>
+          <span class="pill light"><i data-icon="heart"></i> Free for LVMM members</span>
+        </div>
+        <div class="btn-row" style="margin-top:30px">
+          <a class="btn btn-primary" href="#enroll">Enroll a child <i data-icon="arrowRight"></i></a>
+          <a class="btn btn-ghost-light" href="mailto:lvmmshala@gmail.com">Contact the Shala</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Our purpose</span>
+          <h2>Read, write &amp; speak Marathi</h2>
+          <div class="prose">
+            <p>Las Vegas Marathi Shala is a non-profit school affiliated with Las Vegas Marathi Mandal. The purpose of Las Vegas Marathi Shala is to teach Marathi culture and Marathi language to the next generation in the Las Vegas area.</p>
+            <p>The aim of the Marathi Shala is to empower children with the ability to read, write and communicate in Marathi. Our next generation will have the opportunity to connect and communicate with their grandparents — primarily to preserve our legacy while we are away from Maharashtra.</p>
+            <p>Marathi language has been approved by <strong>CCSD for the Seal of Biliteracy</strong> on the high school diploma. For more information, <a href="mailto:lvmmshala@gmail.com">contact Marathi Shala</a>.</p>
+          </div>
+          <div class="principal">
+            <div class="avatar" aria-hidden="true">KJ</div>
+            <div><strong style="color:var(--maroon-800);font-family:var(--font-display);font-size:1.15rem">Kirti Joshi</strong><div class="muted" style="font-size:.9rem">Principal, LVMM Marathi Shala</div></div>
+          </div>
+        </div>
+        <div class="photo-frame reveal reveal-delay-2">
+          <img src="assets/img/gallery/g17.jpg" alt="Children in white and red traditional outfits performing a dance with saffron scarves on stage" loading="lazy">
+          <div class="badge-card">
+            <div class="icon-badge"><i data-icon="graduation"></i></div>
+            <div><strong>Seal of Biliteracy</strong><span>Approved by CCSD for high school diplomas</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="divider-motif"><i data-icon="lotus"></i></div>
+          <span class="eyebrow">At a glance</span>
+          <h2>Why families choose the Shala</h2>
+        </div>
+        <div class="grid grid-4">
+          <div class="card highlight reveal">
+            <div class="icon-badge"><i data-icon="graduation"></i></div>
+            <h3>CCSD Seal of Biliteracy</h3>
+            <p class="muted">Marathi is approved for the Seal of Biliteracy on CCSD high school diplomas.</p>
+          </div>
+          <div class="card highlight reveal reveal-delay-1">
+            <div class="icon-badge"><i data-icon="video"></i></div>
+            <h3>Weekly &amp; online</h3>
+            <p class="muted">Classes once a week on Google Meet, scheduled around teacher and batch availability.</p>
+          </div>
+          <div class="card highlight reveal reveal-delay-2">
+            <div class="icon-badge"><i data-icon="heart"></i></div>
+            <h3>Free for members</h3>
+            <p class="muted">Free for children of LVMM members. Non-members: $35 per child.</p>
+          </div>
+          <div class="card highlight reveal reveal-delay-3">
+            <div class="icon-badge maroon"><i data-icon="users"></i></div>
+            <h3>Volunteer run</h3>
+            <p class="muted">This school is solely run by volunteers from our community.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section">
+      <div class="container split" style="align-items:start">
+        <div class="reveal">
+          <span class="eyebrow">LVMM Marathi Shala information</span>
+          <h2>How the Shala works</h2>
+          <p class="lead">Small batches, a flexible weekly schedule and occasional get-togethers in person.</p>
+          <div class="callout" style="margin-top:28px">
+            <i data-icon="mail"></i>
+            <p>Questions? Contact us at <a href="mailto:lvmmshala@gmail.com"><strong>lvmmshala@gmail.com</strong></a></p>
+          </div>
+        </div>
+        <ol class="timeline reveal reveal-delay-1">
+          <li><span class="dot"><i data-icon="users"></i></span><div><h3>Batches by age &amp; level</h3><p>Based on the age and level, batches will be created.</p></div></li>
+          <li><span class="dot"><i data-icon="video"></i></span><div><h3>Once a week on Google Meet</h3><p>Marathi Shala will be held once a week online using Google Meet, based on the common availability of the teacher and students in the batch.</p></div></li>
+          <li><span class="dot"><i data-icon="pin"></i></span><div><h3>In-person meet-ups</h3><p>There will be in-person meet-ups, decided as we proceed.</p></div></li>
+          <li><span class="dot"><i data-icon="heart"></i></span><div><h3>Run by volunteers</h3><p>This school is solely run by volunteers. Want to be a volunteer? Contact us!</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Enrollment -->
+    <section class="section section-alt" id="enroll">
+      <div class="container container-narrow">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Enrollment</span>
+          <h2>Enroll your child</h2>
+          <p class="lead">Fill in the form below — we'll place your child in the right batch and add you to the Shala WhatsApp group.</p>
+        </div>
+
+        <div class="form-card reveal">
+          <form data-demo-form="shala-success" novalidate id="shala-form">
+            <!-- Children -->
+            <div class="form-block">
+              <h3 class="form-section-title">Children</h3>
+              <p class="muted" style="font-size:.92rem;margin-bottom:18px">Enroll up to three children. Fields marked <span style="color:var(--saffron-600)">*</span> are required.</p>
+
+              <fieldset class="fieldset child-set" id="child-1">
+                <legend>Child 1</legend>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="c1-name">Name <span class="req">*</span></label>
+                    <input class="input" id="c1-name" name="child1_name" required autocomplete="off">
+                  </div>
+                  <div class="field">
+                    <label for="c1-age">Age <span class="req">*</span></label>
+                    <select class="select" id="c1-age" name="child1_age" required data-ages>
+                      <option value="" disabled selected>Select</option>
+                    </select>
+                  </div>
+                  <div class="field level-field">
+                    <span class="label" id="c1-level-l">Level <span class="req" style="color:var(--saffron-600)">*</span></span>
+                    <div class="choice-group levels" role="radiogroup" aria-labelledby="c1-level-l">
+                      <label class="choice level"><input type="radio" name="child1_level" value="Beginner" required><span>Beginner<small>New to Shala</small></span></label>
+                      <label class="choice level"><input type="radio" name="child1_level" value="Intermediate"><span>Intermediate<small>Akshar olakh (read/write), can speak easy small sentences, can understand basic instructions in Marathi</small></span></label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="fieldset child-set" id="child-2" hidden>
+                <legend>Child 2 <span class="muted" style="font-family:var(--font-body);font-size:.8rem;font-weight:500">(optional)</span></legend>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="c2-name">Name</label>
+                    <input class="input" id="c2-name" name="child2_name" autocomplete="off">
+                  </div>
+                  <div class="field">
+                    <label for="c2-age">Age</label>
+                    <select class="select" id="c2-age" name="child2_age" data-ages data-optional>
+                      <option value="-na-" selected>-na-</option>
+                    </select>
+                  </div>
+                  <div class="field level-field">
+                    <span class="label" id="c2-level-l">Level</span>
+                    <div class="choice-group levels" role="radiogroup" aria-labelledby="c2-level-l">
+                      <label class="choice level"><input type="radio" name="child2_level" value="Beginner"><span>Beginner<small>New to Shala</small></span></label>
+                      <label class="choice level"><input type="radio" name="child2_level" value="Intermediate"><span>Intermediate<small>Akshar olakh (read/write), can speak easy small sentences, can understand basic instructions in Marathi</small></span></label>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="link-btn" data-remove-child="2" style="margin-top:14px">Remove child 2</button>
+              </fieldset>
+
+              <fieldset class="fieldset child-set" id="child-3" hidden>
+                <legend>Child 3 <span class="muted" style="font-family:var(--font-body);font-size:.8rem;font-weight:500">(optional)</span></legend>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="c3-name">Name</label>
+                    <input class="input" id="c3-name" name="child3_name" autocomplete="off">
+                  </div>
+                  <div class="field">
+                    <label for="c3-age">Age</label>
+                    <select class="select" id="c3-age" name="child3_age" data-ages data-optional>
+                      <option value="-na-" selected>-na-</option>
+                    </select>
+                  </div>
+                  <div class="field level-field">
+                    <span class="label" id="c3-level-l">Level</span>
+                    <div class="choice-group levels" role="radiogroup" aria-labelledby="c3-level-l">
+                      <label class="choice level"><input type="radio" name="child3_level" value="Beginner"><span>Beginner<small>New to Shala</small></span></label>
+                      <label class="choice level"><input type="radio" name="child3_level" value="Intermediate"><span>Intermediate<small>Akshar olakh (read/write), can speak easy small sentences, can understand basic instructions in Marathi</small></span></label>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="link-btn" data-remove-child="3" style="margin-top:14px">Remove child 3</button>
+              </fieldset>
+
+              <button type="button" class="btn btn-outline btn-sm add-child" id="add-child">+ Add another child</button>
+            </div>
+
+            <!-- Membership -->
+            <div class="form-block">
+              <h3 class="form-section-title" id="member-l">LVMM Member?</h3>
+              <p class="muted" style="font-size:.92rem;margin-bottom:14px">Marathi Shala is free for children of LVMM members. <a href="membership.html">Become a member</a>.</p>
+              <div class="choice-group" role="radiogroup" aria-labelledby="member-l">
+                <label class="choice"><input type="radio" name="lvmm_member" value="Yes" required><span>Yes</span></label>
+                <label class="choice"><input type="radio" name="lvmm_member" value="No"><span>No</span></label>
+              </div>
+            </div>
+
+            <!-- Parent -->
+            <div class="form-block">
+              <h3 class="form-section-title" style="margin-bottom:18px">Parent / Guardian</h3>
+              <div class="form-grid">
+                <div class="field full">
+                  <label for="p-name">Parent's/Guardian's Name <span class="req">*</span></label>
+                  <input class="input" id="p-name" name="parent_name" required autocomplete="name">
+                </div>
+                <div class="field full">
+                  <label for="p-email">Primary Email <span class="req">*</span></label>
+                  <input class="input" id="p-email" name="email" type="email" required autocomplete="email">
+                </div>
+                <div class="field">
+                  <label for="p-phone">Phone Number <span class="req">*</span></label>
+                  <input class="input" id="p-phone" name="phone" type="tel" maxlength="12" required autocomplete="tel" aria-describedby="p-phone-hint">
+                  <p class="hint" id="p-phone-hint">This will be added to LVMM Marathi Shala WhatsApp group.</p>
+                </div>
+                <div class="field">
+                  <label for="p-phone2">Second Phone Number</label>
+                  <input class="input" id="p-phone2" name="phone2" type="tel" maxlength="12" autocomplete="off">
+                </div>
+                <div class="field full">
+                  <label for="p-address">Address</label>
+                  <input class="input" id="p-address" name="address" autocomplete="street-address">
+                </div>
+                <div class="field full">
+                  <label for="p-comments">Comments</label>
+                  <textarea class="textarea" id="p-comments" name="comments" style="min-height:96px"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fees -->
+            <div class="form-block">
+              <div class="fees-box">
+                <label class="agree"><input type="checkbox" name="fee_agree" id="fee_agree"> <span>Non Members: I agree to pay the Marathi Shala Fees ($35 per child) <span style="color:var(--saffron-600)">*</span></span></label>
+                <p class="muted" style="font-size:.88rem;margin:10px 0 4px 32px">Payment options:</p>
+                <div class="pay-method">
+                  <div class="icon-badge"><i data-icon="send"></i></div>
+                  <div><strong>Zelle</strong>ID <code>lasvegasmarathimandal@gmail.com</code></div>
+                  <button class="copy-btn" type="button" data-copy="lasvegasmarathimandal@gmail.com">Copy</button>
+                </div>
+                <div class="pay-method">
+                  <div class="icon-badge maroon"><i data-icon="bank"></i></div>
+                  <div><strong>Check</strong>Payable to <code>Las Vegas Marathi Mandal</code><div class="muted" style="font-size:.88rem;margin-top:4px">Address: Abhishek Datar, 1541 Odette Ln, Las Vegas, NV 89117</div></div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;align-items:center">
+              <button class="btn btn-primary" type="submit">Submit enrollment <i data-icon="send"></i></button>
+              <span class="muted" style="font-size:.85rem">Online submission is being connected — we'll confirm by email.</span>
+            </div>
+          </form>
+
+          <div class="form-success" id="shala-success" role="status">
+            <div class="icon-badge" style="margin:0 auto 18px;width:76px;height:76px;border-radius:50%"><i data-icon="check"></i></div>
+            <h3 style="font-size:1.7rem"><span class="mr" lang="mr">धन्यवाद!</span> Thank you</h3>
+            <p class="muted" style="max-width:460px;margin:0 auto">We've received your enrollment details. The Shala team will be in touch about batches and add you to the WhatsApp group. Questions? Email <a href="mailto:lvmmshala@gmail.com">lvmmshala@gmail.com</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volunteer -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Want to be a volunteer?</h2>
+            <p>This school is solely run by volunteers. If you'd like to teach or help, we'd love to hear from you.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-light" href="mailto:lvmmshala@gmail.com?subject=Marathi%20Shala%20Volunteer"><i data-icon="mail"></i> lvmmshala@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/site.js"></script>
+  <script>
+    (function () {
+      // Age options 5–17
+      document.querySelectorAll("select[data-ages]").forEach(function (sel) {
+        for (var a = 5; a <= 17; a++) { var o = document.createElement("option"); o.value = o.textContent = a; sel.appendChild(o); }
+      });
+      // Add / remove extra children
+      var addBtn = document.getElementById("add-child");
+      var sets = [document.getElementById("child-2"), document.getElementById("child-3")];
+      function sync() { addBtn.hidden = sets.every(function (s) { return !s.hidden; }); }
+      addBtn.addEventListener("click", function () {
+        var next = sets.find(function (s) { return s.hidden; });
+        if (next) { next.hidden = false; next.querySelector("input").focus(); }
+        sync();
+      });
+      document.querySelectorAll("[data-remove-child]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var fs = document.getElementById("child-" + b.dataset.removeChild);
+          fs.querySelectorAll("input[type=text], input:not([type])").forEach(function (i) { i.value = ""; });
+          fs.querySelectorAll("input[type=radio]").forEach(function (i) { i.checked = false; });
+          fs.querySelector("select").value = "-na-";
+          fs.hidden = true; sync(); addBtn.focus();
+        });
+      });
+    })();
+      // Fee agreement is required only for non-members
+    (function () {
+      var fee = document.getElementById("fee_agree");
+      document.querySelectorAll('input[name="lvmm_member"]').forEach(function (r) {
+        r.addEventListener("change", function () { fee.required = r.value === "No" && r.checked; });
+      });
+    })();
+  </script>
+</body>
+</html>

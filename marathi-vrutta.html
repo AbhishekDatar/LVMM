@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>मराठी वृत्त — Marathi Corner — Las Vegas Marathi Mandal</title>
+  <meta name="description" content="मराठी वृत्त: a Marathi literary corner with stories and poems written by members of Las Vegas Marathi Mandal.">
+  <meta name="theme-color" content="#7a1f2b">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* मराठी वृत्त — reading layout */
+    .page-hero h1.mr { font-weight: 400; letter-spacing: 0; font-size: clamp(2.6rem, 6vw, 4.5rem); }
+    .reading { max-width: 720px; margin: 0 auto; }
+    .toc { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: clamp(22px, 3vw, 30px); box-shadow: var(--shadow-sm); }
+    .toc h2 { font-family: var(--font-body); font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; color: var(--saffron-600); margin-bottom: 12px; font-weight: 700; }
+    .toc ol { list-style: none; counter-reset: toc; padding: 0; margin: 0; display: grid; gap: 4px; }
+    .toc li { counter-increment: toc; }
+    .toc a { display: grid; grid-template-columns: 34px 1fr auto; align-items: baseline; gap: 10px; padding: 12px 10px; border-radius: 12px; text-decoration: none; color: var(--ink-900); transition: background .2s; }
+    .toc a:hover { background: var(--cream-200); color: var(--maroon-700); }
+    .toc a::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-display); color: var(--saffron-500); font-weight: 600; }
+    .toc .t { font-family: var(--font-marathi); font-size: 1.2rem; color: var(--maroon-800); }
+    .toc .a { font-family: var(--font-marathi); font-size: .95rem; color: var(--text-muted); }
+    .toc .k { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); }
+    .piece { scroll-margin-top: calc(var(--header-h) + 24px); }
+    .piece + .piece { margin-top: clamp(64px, 9vw, 110px); }
+    .piece-figure { margin: 0 0 32px; border-radius: var(--radius-lg); overflow: hidden; background: #fff; border: 6px solid #fff; box-shadow: var(--shadow); }
+    .piece-figure img { width: 100%; height: auto; }
+    .piece-figure.contain { background: #fff; padding: 12px 24px; }
+    .piece-figure.contain img { max-height: 340px; width: auto; margin: 0 auto; }
+    .piece-kind { margin-bottom: 10px; }
+    .piece h2.mr { font-weight: 400; letter-spacing: 0; font-size: clamp(2rem, 4.2vw, 2.8rem); line-height: 1.3; margin-bottom: 10px; }
+    .piece .byline { display: flex; align-items: center; gap: 10px; margin: 0 0 30px; padding-bottom: 22px; border-bottom: 1px solid var(--border); }
+    .piece .byline::before { content: ""; width: 28px; height: 2px; background: var(--saffron-500); }
+    .article p { margin: 0 0 1.1em; }
+    .article p:first-of-type::first-letter { font-size: 1.15em; color: var(--maroon-700); }
+    .article .closing { text-align: center; font-size: 1.3rem; color: var(--maroon-700); margin-top: 1.6em; padding: 1em 0 0; border-top: 1px dashed var(--sand); }
+    .poem-wrap { background: linear-gradient(135deg, rgba(242,179,61,.12), rgba(232,119,46,.06)); border: 1px solid rgba(232,119,46,.2); border-radius: var(--radius-lg); padding: clamp(28px, 5vw, 52px) clamp(22px, 5vw, 56px); text-align: center; }
+    .poem { margin: 0; font-size: clamp(1.15rem, 2.2vw, 1.35rem); }
+    .poem + .poem { margin-top: 1.6em; }
+    .stanza-mark { display: block; color: var(--saffron-500); margin: 1.2em auto; width: 18px; height: 18px; }
+    .callout .btn svg { width: 18px; height: 18px; margin: 0; color: currentColor; }
+    .back-top { display: inline-flex; align-items: center; gap: 6px; margin-top: 28px; font-size: .9rem; font-weight: 700; text-decoration: none; }
+    .callout > div { min-width: 0; } .callout a[href^="mailto"], .cta-band a[href^="mailto"]:not(.btn) { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body data-page="vrutta">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Community</span><span>/</span><span>मराठी वृत्त</span></nav>
+        <span class="eyebrow">Marathi Corner · Literature</span>
+        <h1 class="mr" lang="mr">मराठी वृत्त</h1>
+        <p class="lead"><span class="mr" lang="mr">आपल्या सभासदांच्या लेखणीतून</span> — stories, reflections and poems written by members of our Mandal, in our own language.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:clamp(40px,6vw,72px)">
+      <div class="container">
+        <div class="reading">
+          <nav class="toc reveal" aria-labelledby="toc-title" id="contents">
+            <h2 id="toc-title">अनुक्रमणिका · Contents</h2>
+            <ol>
+              <li><a href="#calendar"><span><span class="t" lang="mr">कॅलेंडर – एक हितगूज !</span><br><span class="a" lang="mr">वनिता कुबल</span></span><span class="k">Essay</span></a></li>
+              <li><a href="#aabhal"><span><span class="t" lang="mr">परत तो आभाळ आला</span><br><span class="a" lang="mr">अतुल मालवीया</span></span><span class="k">Poem</span></a></li>
+            </ol>
+          </nav>
+
+          <div style="height:clamp(56px,8vw,96px)"></div>
+
+          <!-- Piece 1 -->
+          <article class="piece" id="calendar" lang="mr">
+            <figure class="piece-figure contain reveal">
+              <img src="assets/img/vrutta-1.png" alt="Cartoon of a cheerful calendar wearing glasses, holding a pen and reading a book" width="833" height="582" loading="lazy">
+            </figure>
+            <span class="pill piece-kind" lang="en">Essay · लेख</span>
+            <h2 class="mr">कॅलेंडर – एक हितगूज !</h2>
+            <p class="byline">वनिता कुबल</p>
+            <div class="article">
+              <p>सालाबादप्रमाणे नवीन वर्ष उगवले , जानेवारी महिना उजाडला व घरातील सर्व कॅलेंडर्स बदलून टाकण्याचे काम करणे आले.</p>
+              <p>भिंतींवरील सर्व जुनी कॅलेंडर्स काढून टाकली आणि त्या जागी नवीन वर्षाची नवीन कॅलेंडर्स विराजमान केली.</p>
+              <p>हे करत असताना मनात विचारांचे काहूर माजले.  या जुन्या, गतवर्षीच्या कॅलेंडरने मला वर्षभर साथ दिली --  आपले सणवार कधी ? वर्षभरातील महत्वाचे दिवस कधी ? आपल्या प्रिय माणसांचे वाढदिवस कधी  ? ---  एक ना अनेक !!  आणि किती गोष्टींच्या नोंदी आपण कॅलेंडरवर करतो -- मुलांच्या शाळा-कॉलेज मधील वेगवेगळे प्रसंग, समारंभ कधी ?  कुणाला कधी बोलवायचे ? पुढचे संगीत संमेलन कधी ? -- लिहावे तितके थोडेच !</p>
+              <p>खरेच -- कॅलेंडरबरोबर हितगुज करत करतच आपण वर्षभर वाटचाल करतो --</p>
+              <p>आणि -- गरज सरो व वैद्य मरो, या म्हणीप्रमाणे, वर्ष संपले व या कॅलेंडरचा आता उपयोग नाही म्हणून एका क्षणात आपण ते फेकून देतो !!</p>
+              <p>सगळं कळतंय, वाईटही वाटतंय --  पण हे जुने कॅलेंडर ठेवून तरी काय करणार ? अर्थात आठवण म्हणून आपण ते जतन करू ठेवू शकतो --</p>
+              <p>पण अशा किती गोष्टी संभाळून ठेवणार ? आणि आता तर कॉम्प्युटरच्या जगात आपण वावरतोय -- एक बटण दाबले हि डोळ्यासमोर सर्व हजर !!</p>
+              <p>तात्पर्य काय -- जुन ते सोनं असले तरी नव्याला सामोरे जाणे हाच एक मार्ग आहे व त्यातच शहाणपण आहे !</p>
+              <p>हे सर्वे तात्विक असले तरी --</p>
+              <p>माझे जुने कॅलेंडर -- क्षमा कर मला ! पण खरं सांगू , मी तुझी साथ नाही सोडत आहे --  मी तुझ्याच पुढच्या वारसदाराचं  बोट पकडून पुढच्या वर्षांची वाटचाल करणार आहे ! माझ्या जुन्या कडू-गोड आठवणी विरळ झाल्या तरी पूर्णपणे नाही विसरल्या जाणार !</p>
+              <p class="closing">देवाला वाहिलेल्या फूलांचेही शेवटी निर्माल्यच होते ना !!</p>
+            </div>
+            <a class="back-top" href="#contents" lang="en">↑ Back to contents</a>
+          </article>
+
+          <!-- Piece 2 -->
+          <article class="piece" id="aabhal" lang="mr">
+            <figure class="piece-figure reveal">
+              <img src="assets/img/vrutta-2.png" alt="Las Vegas skyline beneath dramatic storm clouds with snow-capped mountains behind" width="757" height="496" loading="lazy">
+            </figure>
+            <span class="pill piece-kind" lang="en">Poem · कविता</span>
+            <h2 class="mr">परत तो आभाळ आला</h2>
+            <p class="byline">अतुल मालवीया</p>
+            <div class="poem-wrap">
+<p class="poem">परत तो आभाळ आला
+परत वाहिले ते ढग
+किती आतुरतेने वाट आज
+बघतो मी तुझी बघ</p>
+              <i data-icon="lotus" class="stanza-mark"></i>
+<p class="poem">पाऊल माझे काही
+आता मागे वळेना
+तुला भेटल्या शिवाय
+मन माझे जुळेना</p>
+              <i data-icon="lotus" class="stanza-mark"></i>
+<p class="poem">तो हलकाच थंड वारा
+पावसाने झालो ओला चिंब
+माझ्याच आकारात शोधतो
+मी तुझे प्रतिबिंब</p>
+              <i data-icon="lotus" class="stanza-mark"></i>
+<p class="poem">चारी दिशा ला बघतो
+दिसली मला तीच हिरवळ
+तू ये ना गडे लवकर
+पसरावं तुझा तोच दरवळ</p>
+            </div>
+            <a class="back-top" href="#contents" lang="en">↑ Back to contents</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt section-sm">
+      <div class="container">
+        <div class="reading">
+          <div class="callout reveal">
+            <i data-icon="book"></i>
+            <div>
+              <strong style="color:var(--maroon-800);font-family:var(--font-display);font-size:1.25rem">Share your writing <span class="mr" lang="mr" style="font-weight:400">· तुमचं लेखन पाठवा</span></strong>
+              <p class="muted" style="margin:6px 0 14px">Have a story, poem, memory or reflection in Marathi? We'd love to publish it in <span class="mr" lang="mr">मराठी वृत्त</span>. Send your piece (and an image, if you have one) to <a href="mailto:lasvegasmarathimandal@gmail.com">lasvegasmarathimandal@gmail.com</a>.</p>
+              <a class="btn btn-maroon btn-sm" href="mailto:lasvegasmarathimandal@gmail.com?subject=Submission%20for%20Marathi%20Vrutta"><i data-icon="send"></i> Submit your writing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
